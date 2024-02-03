@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 // If loading a variable font, you don't need to specify the font weight
 const inter = Inter({ subsets: ["latin"] });
 
-{/*Alternatively, you can create a CSS variable and use it with your preferred CSS solution:
+/*Alternatively, you can create a CSS variable and use it with your preferred CSS solution:
 app/global.css
 
 html {
@@ -14,7 +14,7 @@ html {
 h1 {
   font-family: var(--font-roboto-mono);
 }
-In the example above, Inter will be applied globally, and any <h1> tags will be styled with Roboto Mono*/}
+In the example above, Inter will be applied globally, and any <h1> tags will be styled with Roboto Mono*/
 
 export const metadata = {
   title: "Create Next App",
