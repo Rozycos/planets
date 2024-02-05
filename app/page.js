@@ -5,8 +5,10 @@ import './globals.scss';
 
 export default function Home() {
   return (
-    // 
-    <Header/>
-
+    <>
+      <div className="wrapper">
+        <Header/>
+      </div>
+    </>
   );
 }

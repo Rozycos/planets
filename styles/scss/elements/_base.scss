@@ -8,12 +8,46 @@
 
 body {
     // font-family: $font-nunito;
-    background: rgb(77,82,96);
+    background: rgb(15,22,40,1);
     background: linear-gradient(127deg, rgba(77,82,96,1) 0%, rgba(20,29,51,1) 22%, rgba(15,22,40,1) 39%, rgba(5,10,22,1) 100%);
+    //height: calc(100vh + 8.875rem);
     height: 100vh;
+    &::after{
+                content: "";
+                display: block;
+                background-image: url("../../../public/star_bacground.webp");
+                //background-repeat: repeat;
+                background-size:cover;
+                //background-position: 0 10%;
+                height: 100vh;
+                //width: 100vw;
+                //max-width: 100%;
+                max-height: 100%;
+                transform: translate(0, -8.875rem);
+            
+            }
+
 }
 
 .container {
     margin: 0 auto;
-    width: 1200px;
+    max-width: 1720px;
+}
+
+// header{
+//     &::after{
+//         content: "";
+//         display: block;
+//         background-image: url("../../../public/star_bacground.webp");
+//         background-repeat: no-repeat;
+//         height: 100vh;
+//         width: 100vw;
+//         //background-position: 10% 10%;
+    
+//     }
+// }    
+
+h1{
+    font-size: 4.5rem;
+
 }
