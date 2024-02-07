@@ -7,6 +7,10 @@
     padding: 0 0.5rem;
     color: $color-white;
     font-size: 1.25rem;
+
+    // @include mobile{
+    //     justify-content:center;
+    // }
     
     &-container{
         display: inline-block;
@@ -18,7 +22,13 @@
             color:$color-white;
             text-decoration: none;
         }
+        // &:nth-child(2){
+        //     @include mobile{
+        //         justify-self: center;
+        //     }    
+        // }
     }
+
 }
 
 .bar1, .bar2, .bar3 {
@@ -51,4 +61,7 @@
 .logo{
     font-weight: bold;
     text-transform: uppercase;
+    // @include mobile{
+    //     justify-self: center;
+    // }
 }
