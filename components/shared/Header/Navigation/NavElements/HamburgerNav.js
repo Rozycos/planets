@@ -23,9 +23,12 @@ export const HamburgerNav =()=>{
                     </li>
                     <li>
                         <div className="logo">
-                            <h1>Universe</h1>
+                            <Link href="/" passHref>
+                                <h1>Universe</h1>
+                            </Link>
                         </div>
                     </li>
+                    <li className="dummy"></li>
                 </ul>
                 <div className={`${isOpen ? '' : 'hide'}`}> 
                 {/* wystylować tego diva */}

@@ -19,7 +19,9 @@ export const NavBar=()=>{
                     </li>
                     <li>
                         <div className="logo">
-                            <h1>Universe</h1>
+                            <Link href="/" passHref>
+                                <h1>Universe</h1>
+                            </Link>
                         </div>
                     </li>
                     <li>

@@ -1,0 +1,43 @@
+.nav-box{
+    
+    //width: 700px;
+    //height: 700px;
+    //overflow: hidden;
+    background-image: url(../../../public/solar_system_sq.webp);
+    background-repeat: no-repeat;
+    background-position: 0 150px;
+    background-size:cover;
+    width: 1000px;
+    height: 700px;
+    //transform: rotate(45deg);
+    
+    &__main{
+        background-image: url(../../../public/sun.webp);
+        background-repeat: no-repeat;
+        background-size:cover;
+        //background-position: 50px -50px;
+        width: 700px;
+        height: 700px;
+        margin: 0 auto;
+        //transform: rotate(-45deg);
+    
+    }
+}
+
+.slider{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    //overflow: hidden;
+    //margin-top: 118px;
+    &-section{
+        max-height: fit-content;
+    }
+}
+
+.nazwa{
+    overflow: hidden;
+    //height: 1000px;
+    //width:1000px;
+    
+}

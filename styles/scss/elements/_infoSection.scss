@@ -1,0 +1,38 @@
+.info-section{
+    max-width: 76.5625rem;
+    margin: 0 auto;
+}
+
+.planet-name{
+    text-align: center;
+    color: $color-white-secondary;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin:0 0 1rem
+}
+
+.boxes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.box{
+    &-title{
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $color-grey;
+        text-transform: uppercase;
+        margin: 0 1rem 1rem;
+    }
+
+    &-info{
+        font-size: 1rem;
+        //font-weight:;
+        color: $color-white;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}
