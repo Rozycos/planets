@@ -1,26 +1,69 @@
 .nav-box{
     
-    //width: 700px;
-    //height: 700px;
-    //overflow: hidden;
-    background-image: url(../../../public/solar_system_sq.webp);
-    background-repeat: no-repeat;
-    background-position: 0 150px;
-    background-size:cover;
-    width: 1000px;
-    height: 700px;
-    //transform: rotate(45deg);
-    
     &__main{
         background-image: url(../../../public/sun.webp);
         background-repeat: no-repeat;
         background-size:cover;
-        //background-position: 50px -50px;
-        width: 700px;
-        height: 700px;
-        margin: 0 auto;
-        //transform: rotate(-45deg);
+        width: 34vw;
+        height: 34vw;
+        max-width: 691px;
+        max-height: 691px;
+
+
+        &::before{
+            content: "";
+            display: block;
+            position:relative;
+            width: 100%;
+            height: 100%;   
+            background-image: url(../../../public/solar_system_sq.webp);
+            background-repeat: no-repeat;
+            background-size:cover;
+            transform: translate(0, 30%) rotate(0deg);
+            z-index: -1;
+                
+        }
     
+    }
+    &__left{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        transform: translate(-25%, 0);
+        cursor: pointer;
+        
+        &-pic{
+            // width: 250px;
+            // height: 250px;
+            width: 8vw;
+            height: 8vw;
+            background-image: url(../../../public/neptune.webp);
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+    }
+    &__right{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        transform: translate(25%, 0);
+        cursor: pointer;
+        
+        &-pic{
+            // width: 250px;
+            // height: 250px;
+            width: 8vw;
+            height: 8vw;
+            background-image: url(../../../public/mercury.webp);
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+    }    
+
+    &__title{
+        color: $color-white-secondary;
+        font-size: 28px;
+        text-transform: uppercase;
     }
 }
 
@@ -28,16 +71,5 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    //overflow: hidden;
-    //margin-top: 118px;
-    &-section{
-        max-height: fit-content;
-    }
-}
-
-.nazwa{
-    overflow: hidden;
-    //height: 1000px;
-    //width:1000px;
-    
+    align-items: center;
 }

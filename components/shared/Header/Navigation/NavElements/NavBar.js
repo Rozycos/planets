@@ -6,7 +6,8 @@ export const NavBar=()=>{
     //const router = useNavigation();
     return(
         <>
-            <nav className="container">
+            {/* <nav className="container"> */}
+            <nav>
                 <ul className="nav">
                     <li>
                         {/* <Link href="/" passHref>

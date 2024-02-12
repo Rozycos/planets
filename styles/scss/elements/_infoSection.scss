@@ -14,9 +14,11 @@
 
 .boxes{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
+    //flex-direction: row;
+    flex-wrap: wrap;
+    //justify-content: space-between;
+    justify-content: center;
+    
 }
 
 .box{
@@ -25,7 +27,8 @@
         font-weight: bold;
         color: $color-grey;
         text-transform: uppercase;
-        margin: 0 1rem 1rem;
+        margin: 0 1rem;
+        padding: 1rem;
     }
 
     &-info{
