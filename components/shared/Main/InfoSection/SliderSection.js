@@ -5,6 +5,7 @@ export const SliderSection=()=>{
     const [leftPlanets, setLeftPlanets] = useState(8)
     const [planets, setPlanets]= useState(0);
     const [rightPlanets, setRightPlanets]= useState(1);
+    const [solarSystem, setSolarSystem]=useState(0);
 
     
     //const planetStyle={
@@ -34,26 +35,31 @@ export const SliderSection=()=>{
 
     //     return
 
-    // },[]);
+    // },[]);    
 
     const handleIncreasePlanets=()=>{
         if (leftPlanets >= 8 ){
             setLeftPlanets(0);
             setPlanets(1);
             setRightPlanets(2);
+            //setSolarSystem(40);
         } else if (planets >= 8){
             setLeftPlanets(8);
             setPlanets(0);
             setRightPlanets(1);
+            //setSolarSystem(0);
         } else if (rightPlanets >= 8){
             setLeftPlanets(7);
             setPlanets(8);
-            setRightPlanets(0);    
+            setRightPlanets(0);  
+            //setSolarSystem(8*40);  
         } else {
             setLeftPlanets(leftPlanets +1);
             setPlanets(planets+1);
             setRightPlanets(rightPlanets +1);
+            //setSolarSystem(planets*40);
         }
+        setSolarSystem(40*planets+40);
      }
 
     const handleDecreasePlanets=()=>{
@@ -74,6 +80,7 @@ export const SliderSection=()=>{
             setPlanets(planets -1);
             setRightPlanets(rightPlanets -1);
         }
+        setSolarSystem(40*planets-40);
     }
 
     //console.log(planets);
@@ -88,9 +95,24 @@ export const SliderSection=()=>{
                         <div style={{backgroundImage: 'url(/planet'+ leftPlanets + '.webp)'}} className="nav-box__left-pic" ></div>
                         <div className="nav-box__title">Neptune{leftPlanets}</div>
                     </div>
-                    <div className="nav-box">  {planets} 
+                    <div className="nav-box">  {planets} {solarSystem}
                         {/* <img src="planets.webp" width="700px" height="700px"/> */}
-                        <div style={{backgroundImage: 'url(/planet'+ planets + '.webp)'}} className="nav-box__main"></div>
+                        <div style={{backgroundImage: 'url(/planet'+ planets + '.webp)'}} className="nav-box__main">
+                            <div style={{
+                                    content: "''",
+                                    display: 'block',
+                                    position:'relative',
+                                    width: '100%',
+                                    height: '100%',  
+                                    backgroundImage: 'url(/solar_system_sq.webp)',
+                                    backgroundRepeat: 'no-repeat',
+                                    backgroundSize:'cover',
+                                    transform: 'translate(0, 30%) rotate('+ solarSystem + 'deg)',
+                                    zIndex: -1,
+                                    //animation: 'rotateAnimation 0.5s ease',
+                                }}>
+                            </div>
+                        </div>
                         
                     </div>     
                     <div className="nav-box__right" onClick={handleDecreasePlanets}>
