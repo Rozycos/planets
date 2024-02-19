@@ -7,36 +7,7 @@ export const SliderSection=()=>{
     const [planets, setPlanets]= useState(0);
     const [rightPlanets, setRightPlanets]= useState(1);
     const [solarSystem, setSolarSystem]=useState(0);
-
-    
-    //const planetStyle={
-        // backgroundImage: url(../../../public/neptune.webp),
-        //backgroundImage: 'url(/planet`{planets}`.webp)',
-        // backgroundRepeat: 'no-repeat',
-        // backgroundSize: 'cover',
-    //}
-    // useEffect(()=>{
-    //     const handleIncreasePlanets=()=>{
-    //         if (planets >= 8){
-    //             setPlanets(0);
-    //         } else {
-    //             setPlanets(planets +1);
-    //         }
-    //     }
-    
-    //     const handleDecreasePlanets=()=>{
-    //         if (planets <= 0){
-    //             setPlanets(8);
-    //         } else {
-    //             setPlanets(planets -1);
-    //         }
-    //     }
-    //     handleIncreasePlanets();
-    //     handleDecreasePlanets();
-
-    //     return
-
-    // },[]);    
+    //const [currentTranslate, setCurrentTranslate] = useState(0);
 
     const handleIncreasePlanets=()=>{
         const step = 40;
@@ -59,6 +30,7 @@ export const SliderSection=()=>{
         }
         //setSolarSystem(40*planets+40);
         setSolarSystem((prevSolarSystem) => prevSolarSystem + step);
+        //setCurrentTranslate((prevTranslate) => prevTranslate - 100);
      }
 
     const handleDecreasePlanets=()=>{
@@ -81,11 +53,8 @@ export const SliderSection=()=>{
             setRightPlanets(rightPlanets -1);
         }
         setSolarSystem((prevSolarSystem) => prevSolarSystem - step);
+        //setCurrentTranslate((prevTranslate) => prevTranslate + 100);
     }
-
-    //console.log(planets);
-    
-
 
     return(
         <>
@@ -113,7 +82,11 @@ export const SliderSection=()=>{
             <section className="slider-section">
                 <span className="slider">
                     <div className="nav-box__left" onClick={handleIncreasePlanets}>
-                        <div style={{backgroundImage: 'url(/planet'+ leftPlanets + '.webp)'}} className="nav-box__left-pic" ></div>
+                        <div style={{
+                                // backgroundImage: 'url(/planet'+ leftPlanets + '.webp)', transform: `translateX(${currentTranslate}px)`, transition: 'transform 0.5s ease'
+                                backgroundImage: 'url(/planet'+ leftPlanets + '.webp)',
+                            }} className="nav-box__left-pic" >
+                        </div>
                         <div className="nav-box__title">{data[leftPlanets].name}</div>
                     </div>
                     <div className="nav-box">
