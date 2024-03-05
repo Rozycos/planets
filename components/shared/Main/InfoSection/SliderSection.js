@@ -1,6 +1,7 @@
 "use client"
 import { useState, useEffect } from 'react';
 import {data} from '../../../../data/data';
+import { Info } from './Info';
 
 export const SliderSection=()=>{
     const [leftPlanets, setLeftPlanets] = useState(8)
@@ -8,6 +9,11 @@ export const SliderSection=()=>{
     const [rightPlanets, setRightPlanets]= useState(1);
     const [solarSystem, setSolarSystem]=useState(0);
     //const [currentTranslate, setCurrentTranslate] = useState(0);
+    const countersConfig = [
+        { name: 'diameter', targetNumber: `${data[planets].diameter}`, animationDuration: 300, galaxy: `${data[planets].galaxy}`, unit:'km' },
+        { name: 'lenght of day', targetNumber: `${data[planets].lenght}`, animationDuration: 300, galaxy: `${data[planets].galaxy}`, unit:'Earth hours' },
+        { name: 'average temperature', targetNumber: `${data[planets].temperature}`, animationDuration: 300, galaxy: `${data[planets].galaxy}`, unit:'°C' },
+      ]
 
     const handleIncreasePlanets=()=>{
         const step = 40;
@@ -65,19 +71,21 @@ export const SliderSection=()=>{
                         <div className="box-title">Galaxy</div>
                         <div className="box-info">{data[planets].galaxy}</div>
                     </div>
-                    <div className="box">
+                    {/* <div className="box">
                         <div className="box-title">Diameter</div>
-                        <div className="box-info">{data[planets].diameter}</div>
+                        <div className="box-info">{data[planets].diameter} km</div>
                     </div>
                     <div className="box">
                         <div className="box-title">Length of day</div>
-                        <div className="box-info">{data[planets].lenght}</div>
+                        <div className="box-info">{data[planets].lenght} Earth hours</div>
                     </div>
                     <div className="box">
                         <div className="box-title">Average temperature</div>
-                        <div className="box-info">{data[planets].temperature}</div>
-                    </div>
+                        <div className="box-info">{data[planets].temperature} °C</div>
+                    </div> */}
+                    <Info countersConfig={countersConfig} />
                 </span>
+
             </section>
             <section className="slider-section">
                 <span className="slider">
@@ -111,7 +119,7 @@ export const SliderSection=()=>{
                         
                     </div>     
                     <div className="nav-box__right" onClick={handleDecreasePlanets}>
-                        <div className="nav-box__title">{data[rightPlanets].name}</div>
+                        <div className="nav-box__title nav-box__title--right">{data[rightPlanets].name}</div>
                         <div style={{backgroundImage: 'url(/planet'+ rightPlanets + '.webp)'}} className="nav-box__right-pic"></div>
                     </div>
                 </span>

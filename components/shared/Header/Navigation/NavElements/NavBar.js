@@ -16,7 +16,8 @@ export const NavBar=()=>{
                         <Link href="/" passHref>Home</Link>
                     </li>
                     <li>
-                        <Link href="/blog" passHref>Blog</Link>
+                        {/* <Link href="/blog" passHref>Blog</Link> */}
+                        <Link href="#" passHref>Blog</Link>
                     </li>
                     <li>
                         <div className="logo">
@@ -26,10 +27,12 @@ export const NavBar=()=>{
                         </div>
                     </li>
                     <li>
-                        <Link href="/about" passHref>About</Link>
+                        {/* <Link href="/about" passHref>About</Link> */}
+                        <Link href="#" passHref>About</Link>
                     </li>
                     <li>
-                        <Link href="/contact" passHref>Contact</Link>
+                        {/* <Link href="/contact" passHref>Contact</Link> */}
+                        <Link href="#" passHref>Contact</Link>
                     </li>
                 </ul>
             </nav>

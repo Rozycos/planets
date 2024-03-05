@@ -65,6 +65,10 @@
         font-size: 28px;
         text-transform: uppercase;
         min-width: 9.375rem;
+
+        &--right{
+            text-align: right;
+        }
     }
 }
 
