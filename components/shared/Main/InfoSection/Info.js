@@ -15,7 +15,7 @@ export const Info=({ countersConfig })=>{
         const animateCounter = (name, startTime, targetNumber, animationDuration, unit) => {
           const countAnimation = () => {
             const currentTime = Date.now();
-            const elapsedTime = currentTime - startTime;
+            const elapsedTime = currentTime - startTime; 
     
             if (elapsedTime < animationDuration) {
               const progress = (elapsedTime / animationDuration) * targetNumber;
