@@ -35,7 +35,7 @@ export const roboto_mono = Roboto_Mono({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.variable} ${roboto_mono.variable}`}>{children}</body>
       {/* <body>{children}</body> */}
     </html>
   );
